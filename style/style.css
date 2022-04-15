@@ -60,8 +60,9 @@ body {
 
 }
 
-#form {
+#form-div {
   height: 30%;
+  box-shadow: 0 4px 2px -2px gray;
 }
 
 .h3-text {
@@ -110,6 +111,20 @@ form {
   width: 75%;
 }
 
+input:focus {
+  box-shadow: 0 0 5pt 2pt #D3D3D3;
+  outline-width: 0px;
+}
+
+input:hover {
+  box-shadow: 0 0 5pt 2pt #D3D3D3;
+}
+
+#mismatch {
+  font-size: 12px;
+  color: red;
+}
+
 .button-div {
   margin-left: 50px;
   margin-top: 20px;
@@ -123,6 +138,12 @@ form {
   background-color: rgb(230, 130, 30);
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
+
+input:invalid:focus {
+  box-shadow: 0 0 5pt 2pt #ee5252;
+}
+
 
 

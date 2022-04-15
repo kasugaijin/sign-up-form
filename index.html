@@ -17,7 +17,7 @@
 <div class="form-container">
   <div id="sizzle">
     <div class="h3-text">
-      <h3 id="header">Are you ready to release your innver Viking?</h3>
+      <h3 id="header">Are you ready to release your inner Viking?</h3>
       <h3>
         Sign up now for a journey of a lifetime - two weeks living like a savage in the Norweigan fjords. 
         You too can be like Ragnar and Lagertha.
@@ -25,37 +25,42 @@
       <h3>Do it for Odin.</h3>
     </div>
   </div>
-  <div id="form">
+  <div id="form-div">
     <div class="cta">
       To Valhalla!
     </div>
     <!-- would include value attribute for a real form in below inputs -->
-    <form action="x" method="y">
+    <form action="" method="" id="form">
       <div class="inputs">
-        <label for="first-name">First Name:</label>
+        <label for="first-name">*First Name:</label>
         <input type="text" name="first-name" id="first-name" required>
-        <label for="email">Email:</label>
+        <label for="email">*Email:</label>
         <input type="email" name="email" id="email" required>
-        <label for="pwd">Password:</label>
-        <input type="password" name="pwd" id="pwd" required>
+        <label for="pwd">*Password:</label>
+        <input type="password" name="pwd" id="pwd" minlength="6" 
+        placeholder="6 or more characters" required onchange='match();'>
+        <p id="mismatch"></p>
       </div>
       <div class="inputs">
-        <label for="last-name">Last Name:</label>
+        <label for="last-name">*Last Name:</label>
         <input type="text" name="last-name" id="last-name" required>
-        <label for="tel">Telephone:</label>
-        <input type="tel" name="tel" id="tel" required>
-        <label for="con-pwd">Confirm Password:</label>
-        <input type="password" name="con-pwd" id="con-pwd" required>
+        <label for="tel">*Telephone:</label>
+        <input type="tel" name="tel" id="tel" placeholder="123-456-7891"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="xxx-xxx-xxxx" required>
+        <label for="con-pwd">*Confirm Password:</label>
+        <input type="password" name="con-pwd" id="con-pwd" minlength="6"
+         placeholder="Confirm password" required onchange='match();'>
       </div>
     </form>
   </div>
 
     <div id="submit">
       <div class="button-div">
-        <button type="submit" id="submit-button">Sign up</button>
+        <button form="form" type="submit" id="submit-button" disabled >Sign up</button>
         <p>Already have an account? <a href="">Log in</a>.</p>
       </div>
     </div>
 </div>
+<script src="./script.js"></script>
 </body>
 </html>
